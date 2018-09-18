@@ -78,8 +78,8 @@ handles.numExamples=str2double(get(handles.nExamples,'String'));
 handles.numTests=str2double(get(handles.nTests,'String'));
 
 %% OBS! Hard coding of any extra args that need to be passed
-handles.ExtraArgsArray = {'usePlayrec', 0, 'RMEslider', 'FALSE','preSilence', 00};
-% handles.ExtraArgsArray = {'usePlayrec', 1, 'RMEslider', 'TRUE','preSilence', 0};
+% handles.ExtraArgsArray = {'usePlayrec', 0, 'RMEslider', 'FALSE','preSilence', 00};
+handles.ExtraArgsArray = {'usePlayrec', 1, 'RMEslider', 'TRUE','preSilence', 0};
 
 
 % Update handles structure
