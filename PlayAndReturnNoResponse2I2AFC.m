@@ -24,7 +24,7 @@ else
 end
 originalColour = get(responseGUI.Children(buttonIndex),'BackgroundColor');
 set(responseGUI.Children(buttonIndex),'BackgroundColor',CorrectColour)
-pause(1.5);
+pause(2.5);
 
 
 % intialize playrec if necessary
