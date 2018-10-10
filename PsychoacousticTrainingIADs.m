@@ -169,10 +169,15 @@ for i= 1:handles.numExamples
 %     else
 %         InfoToDisplay= sprintf('To the L');
 %     end
+%     if p.Order==1
+%         InfoToDisplay= sprintf('                        To the R');
+%     else
+%         InfoToDisplay= sprintf('To the L                         ');
+%     end
     if p.Order==1
-        InfoToDisplay= sprintf('                        To the R');
-    else
         InfoToDisplay= sprintf('To the L                         ');
+    else
+        InfoToDisplay= sprintf('                        To the R');
     end
     % function [response,p] = PlayAndReturnResponse2I2AFC(Wave2Play,trial,p)
     responseGUI = PlayAndReturnNoResponse2I2AFC(w,p,InfoToDisplay,order(i));
