@@ -24,7 +24,7 @@ else
 end
 originalColour = get(responseGUI.Children(buttonIndex),'BackgroundColor');
 set(responseGUI.Children(buttonIndex),'BackgroundColor',CorrectColour)
-pause(2.5);
+pause(1.5);
 
 
 % intialize playrec if necessary
@@ -34,6 +34,7 @@ if p.usePlayrec == 1 % if you're using playrec
     end
     playrec('init', p.SampFreq, p.playDeviceInd, p.recDeviceInd);
     playrec('play', Wave2Play, [3,4]);
+    pause(length(Wave2Play)/p.SampFreq)
 else
     playEm = audioplayer(Wave2Play,p.SampFreq);
     playblocking(playEm);

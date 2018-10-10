@@ -52,8 +52,6 @@ function ResponsePadXtra2I2AFC_OpeningFcn(hObject, eventdata, handles, varargin)
 % handles    structure with handles and user data (see GUIDATA)
 % varargin   command line arguments to ResponsePadXtra2I2AFC (see VARARGIN)
 
-movegui('center'); 
-
 % Choose default command line output for ResponsePadXtra2I2AFC
 handles.output = hObject;
 handles.FeedbackDurationSec=.6;
@@ -86,7 +84,7 @@ set(handles.interval2,'String',[RA ' ' char(82)]);
 
 % Update handles structure
 guidata(hObject, handles);
-
+movegui(handles.output,'center'); 
 % if varargin{8}==1 % the first trial
 %     pause(2)
 % end
