@@ -18,9 +18,9 @@ OneSoundDuration=max(p.SignalDuration);
 p.responseGUI = ResponsePadXtra2I2AFC(OneSoundDuration,p.ISI,p.Order,p.CorrectImage,p.IncorrectImage,0,InfoToDisplay);
 responseGUI = p.responseGUI;
 if correct==1
-    buttonIndex=2;
-else
     buttonIndex=3;
+else
+    buttonIndex=2;
 end
 originalColour = get(responseGUI.Children(buttonIndex),'BackgroundColor');
 set(responseGUI.Children(buttonIndex),'BackgroundColor',CorrectColour)

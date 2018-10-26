@@ -11,6 +11,12 @@ if strcmp(task, 'TransposedITDs') ||  strcmp(task, 'TransposedILDs')
     OriginalArgs = {'XX','outputAllWavs', 1, 'starting_SNR',starting_SNR , 'IAD', IAD};
     AugmentedArgs = [OriginalArgs, ExtraArgsArray];
     p=TransposedIADsParseArgs(AugmentedArgs{1:length(AugmentedArgs)});
+elseif strcmp(task, 'LoFrqILDs')
+    OriginalArgs = {'XX','outputAllWavs', 1, 'starting_SNR',level,...
+        'TranspositionFreq',0,'ModulationRate',500,...
+        'BackNzLevel', -100,'IAD', 'ILD'};
+    AugmentedArgs = [OriginalArgs, ExtraArgsArray];
+    p=TransposedIADsParseArgs(AugmentedArgs{1:length(AugmentedArgs)});
 elseif strcmp(task, 'NoisySAM')
     % set up necessary parameters
     OriginalArgs = {'XX','outputAllWavs', 1, 'starting_SNR',level};

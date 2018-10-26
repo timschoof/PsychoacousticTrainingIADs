@@ -1,6 +1,6 @@
 function [w, wInQuiet, wUntransposed] = GenerateTheDuple(task, ExOrTst, p)
 %% generate the appropriate sounds
-if strcmp(task, 'TransposedITDs') ||  strcmp(task, 'TransposedILDs')
+if strcmp(task, 'TransposedITDs') ||  strcmp(task, 'TransposedILDs') ||  strcmp(task, 'LoFrqILDs')
     [w, wInQuiet, wUntransposed]=GenerateIADduple(p);
 elseif strcmp(task, 'NoisySAM')
     [w, wInQuiet, wUntransposed]=GenerateSAMtriple(p);
